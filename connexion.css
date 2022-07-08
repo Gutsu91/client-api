@@ -1,0 +1,87 @@
+body {
+  display:flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+  padding: 6rem;
+  background-image: url('https://img.freepik.com/free-vector/geometric-triangle-tile-pattern-background-polygon-vector-graphic-from-grey-triangles_1164-1484.jpg?w=2000');
+  background-repeat: repeat;
+}
+
+form {
+  display: flex;
+  flex-direction:column;
+
+}
+
+section {
+  width: 50%;
+  margin: 0 auto;
+  width: 300px;
+  background: linear-gradient(90deg, rgba(249,231,157,1) 0%, rgba(249,231,157,1) 35%, rgba(108,223,246,1) 100%);
+  padding-bottom: 1rem;
+  border-radius: 5px 25px 5px 25px;
+}
+
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+  opacity: 0.8;
+}
+
+input {
+  margin: 0.6rem;
+  padding: 0.3rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #f0ead6;
+  //mix-blend-mode: screen;
+  color: darkgrey;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+input:focus {
+  outline: 1px solid white;
+}
+
+.connection {
+  background: transparent;
+  border: solid 2px white;
+  border-radius: 10px;
+  width: 50%;
+  color: white;
+  font-size: 1rem;
+  align-self: center;
+  margin: 1.2rem;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1rem;
+}
+
+.shortlink {
+  list-style-type: none;
+  background-color: grey;
+  max-width: 25%;
+  margin: 0 auto;
+  opacity: 0.8;
+}
+
+.shortlink li {
+  padding: 1rem 0;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.shortlink li a {
+  display: inline;
+}

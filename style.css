@@ -1,0 +1,25 @@
+.page {
+    display: flex;
+    flex:1;
+    padding: 2rem;
+}
+.sidebar {
+    width: 250px;
+}
+body {
+        padding: 2rem;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+header, footer {
+    background-color: beige;
+    min-height: 100px;
+    padding: 1rem;
+}
+footer {
+    font-size: 1.5rem;
+    line-height: 100px;
+    text-align: center;
+}
+.categories-list {
+    cursor:pointer;
+}

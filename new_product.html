@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajout d'un produit</title>
+</head>
+<body>
+  <h1>Ajout d'un produit</h1>
+  <form action="" class="addprod" method="post">
+    <input type="text" class="label" placeholder="Nom du produit">
+    <input type="number" class="prix"placeholder="prix du produit">
+    <select name="id_category" id="" class="catlist">
+
+    </select>
+    <input type="submit">
+    <span class="zbreh" style="display:block;padding:0.5rem;"></span>
+  </form>
+  <section class="shortlink" style="padding-top:4rem;">
+    <ul>
+    <li><a href="connexion.html">Se connecter</a></li>
+    <li><a href="new_catgeory.html">Ajouter une catégorie</a></li>
+  </ul>
+  </section>
+  <script>
+    const urlApi = 'http://cepegra-fran.go.yj.fr/api_php/'
+    const formAddProd = document.querySelector('.addprod')
+    const fieldLabel = document.querySelector('.label')
+    const prix = document.querySelector('.prix')
+    const catlist = document.querySelector('.catlist')
+    const zbreh = document.querySelector('.zbreh')
+
+    fetch(urlApi + 'categories')
+    .then(response => response.json())
+    .then(response => {
+      let template = '<option value="Sélectionner une catégorie" selected disabled hidden id="0">Sélectionner une catégorie</option>'
+      let newArray = []
+      for(property in response) {
+        response[property].key = property
+        newArray.push(response[property])
+      }
+      const toLoop = newArray[1]
+      toLoop.forEach(cat => {
+        template += ` <option value="${cat.id}" id="2">${cat.label}</option>`
+      })
+      catlist.innerHTML = template
+    })
+    .catch(error => console.error(error))
+
+    formAddProd.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(urlApi + 'produits', {
+        method: 'POST',
+        headers: {
+          'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({
+          label: formAddProd.querySelector('.label').value,
+          id_categories: catlist.value,
+          prix: prix.value,
+          token:sessionStorage.token
+        })
+      })
+      .then(response => response.json())
+      .then(response => {
+        console.log(response)
+        fieldLabel.value = ""
+        prix.value = ""
+        catlist.id = 0
+        switch(response.code) {
+          case 401: 
+            window.location.href = "connexion.html" 
+            break
+          case 200: 
+            zbreh.innerHTML = "Zbreh"
+            // il faudrait ajouter un zbreh.classList.add pour afficher du vert sur le message de confirmation puis le retirer
+            setTimeout(cleanZbreh => zbreh.innerHTML = "", 3000)
+            // il faudrait ajouter un zbreh.classList.remove dans cleanZbreh pour retirer le vert du message
+        }
+      })
+      .catch(error => console.log(error))
+    })
+  </script>
+</body>
+</html>
