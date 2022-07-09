@@ -9,22 +9,26 @@
     <link rel="stylesheet" href="connexion.css">
 </head>
 <body>
-    <section>
-    <form action="" class="connexion">
-        <h1>Accès membre</h1>
-        <input type="text" class="login">
-        <input type="password" class="password">
-        <input type="submit" value="Connexion" class="connection">
+    <header>
+        <nav class="header--nav">
+            <p class="header--title">niceApi</p>
+            <ul class="nav--ul">
+                <li class="nav--li"><a href="new_catgeory.html" class="nav--a">Ajouter une catégorie</a></li>
+                <li class="nav--li"><a href="new_product.html" class="nav--a">Ajouter un nouveau produit</a></li>
+                <li class="nav--li"><a href="connexion.html" class="nav--a nav--a__active">Se connecter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="form--wrapper">
+    <form action="" class="form--form">
+        <h1 class="form--title">Accès membre</h1>
+        <div class="form--inputWrapper"><input type="text" class="form--input form--input__login"></div>
+        <div class="form--inputWrapper"><input type="password" class="form--input form--input__password"></div>
+        <input type="submit" value="Connexion" class="form--submit">
     </form>
-   
-    <a href="#" class="deconnexion">Déconnexion</a>
-</section>
-<div style="margin-top: 4rem;">
-    <ul class="shortlink">
-    <li><a href="new_product.html">Ajouter un produit</a></li>
-    <li><a href="new_catgeory.html">Ajouter une catégorie</a></li>
-  </ul>
-</div>
+    <a href="#" class="form--disconnect">Déconnexion</a>
+</main>
+<aside class="interraction--message"></aside>
     <script src="connexion.js"></script>
 </body>
 </html>

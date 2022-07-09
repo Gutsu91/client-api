@@ -1,52 +1,103 @@
-body {
-  display:flex;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 80%;
-  padding: 6rem;
-  background-image: url('https://img.freepik.com/free-vector/geometric-triangle-tile-pattern-background-polygon-vector-graphic-from-grey-triangles_1164-1484.jpg?w=2000');
-  background-repeat: repeat;
+
+:root {
+  font-size: 16px;
 }
 
-form {
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+}
+
+.header--nav {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+  opacity: 0.7;
+  align-items: center;
+  align-content: center;
+  height: 3rem;
+}
+
+.header--title {
+  padding-left: 1rem;
+  color: white;
+  font-size: 2rem;
+}
+
+.nav--li {
+  list-style-type: none;
+  display: inline;
+  padding: 1rem;
+}
+
+.nav--a {
+  display: inline;
+  text-decoration: none;
+  padding: 0.4rem;
+  background: #45454588;
+  color: white;
+}
+
+.nav--a__active {
+  pointer-events: none;
+  background-color: darkgrey;
+}
+
+body {
+  padding: 0 6rem;
+  background-image: url('./background-patern.jpg');
+  //background-image: url('https://thumbs.dreamstime.com/b/abstract-simple-geometric-vector-seamless-pattern-white-line-triangular-texture-grey-background-light-gray-abstract-simple-136072651.jpg');
+}
+
+.form--form {
+  padding-top: 2rem;
+  padding-bottom: 1rem;
   display: flex;
   flex-direction:column;
-
 }
 
-section {
+.form--wrapper {
   width: 50%;
   margin: 0 auto;
   width: 300px;
   background: linear-gradient(90deg, rgba(249,231,157,1) 0%, rgba(249,231,157,1) 35%, rgba(108,223,246,1) 100%);
   padding-bottom: 1rem;
-  border-radius: 5px 25px 5px 25px;
+  border-radius: 5px 30px 5px 30px;
+  
 }
 
-h1 {
+.form--inputWrapper {
+  display: flex;
+  margin: 0.6rem;
+}
+
+.form--title {
   text-align: center;
   color: #fff;
   font-size: 1.6rem;
   opacity: 0.8;
+  padding-bottom: 1rem;
 }
 
-input {
-  margin: 0.6rem;
+.form--input {
+  margin: 0 auto;
   padding: 0.3rem;
-  border-radius: 5px;
+  border-radius: 8px;
   border: none;
   background-color: #f0ead6;
-  //mix-blend-mode: screen;
   color: darkgrey;
   font-size: 0.9rem;
   text-align: center;
+  width: 70%;
 }
 
-input:focus {
+.form--input:focus {
   outline: 1px solid white;
 }
 
-.connection {
+.form--submit {
   background: transparent;
   border: solid 2px white;
   border-radius: 10px;
@@ -57,31 +108,12 @@ input:focus {
   margin: 1.2rem;
   font-weight: 500;
   opacity: 0.8;
+  padding: 0.3rem;
 }
 
-a {
-  text-decoration: none;
+.form--disconnect {
   color: white;
   text-align: center;
   display: block;
   font-size: 1rem;
-}
-
-.shortlink {
-  list-style-type: none;
-  background-color: grey;
-  max-width: 25%;
-  margin: 0 auto;
-  opacity: 0.8;
-}
-
-.shortlink li {
-  padding: 1rem 0;
-  opacity: 1;
-  display: flex;
-  justify-content: center;
-}
-
-.shortlink li a {
-  display: inline;
 }

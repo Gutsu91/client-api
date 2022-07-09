@@ -1,8 +1,8 @@
 const urlApi = 'http://cepegra-fran.go.yj.fr/api_php/'
-        const connectForm = document.querySelector('.connexion')
-        const deconnectLink = document.querySelector('.deconnexion')
-        const loginField = document.querySelector('.login')
-        const pwField = document.querySelector('.password')
+        const connectForm = document.querySelector('.form--submit')
+        const deconnectLink = document.querySelector('.form--disconnect')
+        const loginField = document.querySelector('.form--input__login')
+        const pwField = document.querySelector('.form--input__password')
 
         deconnectLink.addEventListener('click', (e) => {
             e.preventDefault()
