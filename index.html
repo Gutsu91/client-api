@@ -5,30 +5,40 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Client API</title>
-            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="style-api.css">
         </head>
         <body>
             <header>
-                <h1>Client API</h1>
+                <nav class="header--nav">
+                    <a class="header--title" href="index.html">niceApi</a>
+                    <ul class="nav--ul">
+                        <li class="nav--li"><a href="new_catgeory.html" class="nav--a">Ajouter une catégorie</a></li>
+                        <li class="nav--li"><a href="new_product.html" class="nav--a">Ajouter un nouveau produit</a></li>
+                        <li class="nav--li"><a href="connexion.html" class="nav--a">Se connecter</a></li>
+                    </ul>
+                </nav>
             </header>
-            <div class="page">
-                <div class="sidebar">
-                    <h2>Catégories</h2>
-                    <ul class="categories-list">
+            <main class="page--wrapper">
+                <section class="sidebar section section__categories">
+                    <h2 class="section--title">Catégories</h2>
+                    <ul class="categories-list section--list">
                         <li><a href="#">Categorie 1</a></li>
                         <li><a href="#">Categorie 2</a></li>
                     </ul>
-                </div>
-                <main>
-                    <h2>Produits de <span  class="titre-categorie"></span></h2>
-                    <ul class="products-list">
+                </section>
+                <section class="section section__products">
+                    <h2 class="section--title">Produits de <span  class="titre-categorie"></span></h2>
+                    <ul class="products-list section--list">
                         <li><a href="#">Produit 1</a></li>
                         <li><a href="#">Produit 2</a></li>
                     </ul>
-                </main>
-            </div>
+                </section>
+            </main>
             <footer>
-                &copy; 2022 - Cepegra
+                <div class="footer--wrapper">
+                    <p>&copy; 2022 - Bebougra</p>
+                    <a class="footer-easterEgg">Wazaaah!</span>
+                </div>
             </footer>
             <script src="main.js"></script>
         </body>

@@ -1,4 +1,5 @@
-const urlApi = 'http://cepegra-fran.go.yj.fr/api_php/';
+//const urlApi = 'http://cepegra-fran.go.yj.fr/api_php/'; //url online
+const urlApi = 'http://localhost/api_php_pierre/' // url locale
 const catListe = document.querySelector('.categories-list')
 const prodListe = document.querySelector('.products-list')
 const catTitle = document.querySelector('.titre-categorie')
@@ -11,7 +12,7 @@ fetch(urlApi + 'categories')
         let template = ''
         response.data.forEach(category => {
             template += `
-            <li class="cat-item" data-id="${category.id}">${category.label}</li>
+            <li class="cat-item section--list-items section--list-items__cat" data-id="${category.id}">${category.label}</li>
             `
         });
         catListe.innerHTML = template
@@ -29,13 +30,13 @@ const fetchCategory = (id = 1)=> {
         if(response.produits.data) {
             response.produits.data.forEach(produit => {
                 template += `
-                <li data-id="${produit.id}">${produit.label}</li>
+                <li class="section--list-items"data-id="${produit.id}">${produit.label}</li>
                 `
             });
             
         }
         prodListe.innerHTML = template
-        catTitle.innerText = `"${response.data[0].label}"`
+        catTitle.innerText = `${response.data[0].label}`
     })
     .catch(error => console.error(error))
 }

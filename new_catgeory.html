@@ -5,22 +5,42 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ajouter une catégorie de produit</title>
+
+  <link rel="stylesheet" href="style-api.css">
 </head>
+
+<link rel="stylesheet" href="style-api.css">
 <body>
-  <h1>Ajouter une catégorie de produit :</h1>
-  <form action="" class="addcat">
-    <input type="text" placeholder="Nom de la catégorie à ajouter" class="label" id="labelCat">
-    <input type="submit" value="ajouter">
+  <header>
+    <nav class="header--nav">
+        <a class="header--title" href="index.html">niceApi</a>
+        <ul class="nav--ul">
+            <li class="nav--li"><a href="new_catgeory.html" class="nav--a nav--a__active">Ajouter une catégorie</a></li>
+            <li class="nav--li"><a href="new_product.html" class="nav--a">Ajouter un nouveau produit</a></li>
+            <li class="nav--li"><a href="connexion.html" class="nav--a">Se connecter</a></li>
+        </ul>
+    </nav>
+</header>
+  <main class="form--wrapper">
+  <form action="" class="addcat form--form">
+    <h2 class="form--title">Ajouter une catégorie</h2>
+    <div class="form--inputWrapper">
+      <input type="text" placeholder="Nom de la catégorie à ajouter" class="label form--input" id="labelCat">
+    </div>
+    <input type="submit" value="ajouter" class="form--submit">
   </form>
-  <section class="shortlink" style="padding-top:4rem;">
-    <ul>
-    <li><a href="connexion.html">Se connecter</a></li>
-    <li><a href="new_product.html">Ajouter un produit</a></li>
-  </ul>
-  </section>
+</main>
   <span class="zbreh" style="display:block;padding:0.5rem;"></span>
+
+  <footer>
+    <div class="footer--wrapper">
+        <p>&copy; 2022 - Bebougra</p>
+        <a class="footer-easterEgg">Wazaaah!</span>
+    </div>
+</footer>
   <script>
-    const urlApi = 'http://cepegra-fran.go.yj.fr/api_php/'
+    //const urlApi = 'http://cepegra-fran.go.yj.fr/api_php/' //url online
+    const urlApi = 'http://localhost/api_php_pierre/' // url locale
     const formAddCat = document.querySelector('.addcat')
     const fieldLabel = document.querySelector('.label')
     const zbreh = document.querySelector('.zbreh')

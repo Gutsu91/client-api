@@ -5,26 +5,48 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ajout d'un produit</title>
+
+  <link rel="stylesheet" href="style-api.css">
 </head>
 <body>
-  <h1>Ajout d'un produit</h1>
-  <form action="" class="addprod" method="post">
-    <input type="text" class="label" placeholder="Nom du produit">
-    <input type="number" class="prix"placeholder="prix du produit">
-    <select name="id_category" id="" class="catlist">
-
+  <header>
+    <nav class="header--nav">
+        <a class="header--title" href="index.html">niceApi</a>
+        <ul class="nav--ul">
+            <li class="nav--li"><a href="new_catgeory.html" class="nav--a">Ajouter une catégorie</a></li>
+            <li class="nav--li"><a href="new_product.html" class="nav--a nav--a__active">Ajouter un nouveau produit</a></li>
+            <li class="nav--li"><a href="connexion.html" class="nav--a">Se connecter</a></li>
+        </ul>
+    </nav>
+</header>
+  <main class="form--wrapper">
+  <form action="" class="addprod form--form" method="post">
+    <h2 class="form--title">Ajout d'un produit</h1>
+    <div class="form--inputWrapper">
+      <input type="text" class="label form--input" placeholder="Nom du produit">
+    </div>
+    <div class="form--inputWrapper">
+      <input type="number" class="prix form--input"placeholder="prix du produit"></div>
+    <div class="form--inputWrapper">
+      <select name="id_category" id="" class="catlist form--input">
     </select>
-    <input type="submit">
-    <span class="zbreh" style="display:block;padding:0.5rem;"></span>
+  </div>
+    <input type="submit" class="form--submit">
+    
   </form>
-  <section class="shortlink" style="padding-top:4rem;">
-    <ul>
-    <li><a href="connexion.html">Se connecter</a></li>
-    <li><a href="new_catgeory.html">Ajouter une catégorie</a></li>
-  </ul>
-  </section>
+</main><aside class="interraction--message">
+  <span class="zbreh" style="display:block;padding:0.5rem;"></span>
+</aside>
+<footer>
+  <div class="footer--wrapper">
+      <p>&copy; 2022 - Bebougra</p>
+      <a class="footer-easterEgg">Wazaaah!</span>
+  </div>
+</footer>
+
   <script>
-    const urlApi = 'http://cepegra-fran.go.yj.fr/api_php/'
+    //const urlApi = 'http://cepegra-fran.go.yj.fr/api_php/' //url online
+    const urlApi = 'http://localhost/api_php_pierre/' // url locale
     const formAddProd = document.querySelector('.addprod')
     const fieldLabel = document.querySelector('.label')
     const prix = document.querySelector('.prix')

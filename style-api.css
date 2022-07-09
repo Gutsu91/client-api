@@ -1,0 +1,224 @@
+
+:root {
+  font-size: 16px;
+}
+
+*, *::before, *::after {
+  padding: 0;
+  margin: 0;
+}
+
+.header--nav {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+  opacity: 0.7;
+  align-items: center;
+  align-content: center;
+  height: 3rem;
+}
+
+.header--title {
+  padding-left: 1rem;
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.nav--li {
+  list-style-type: none;
+  display: inline;
+  padding: 1rem;
+}
+
+.nav--a {
+  display: inline;
+  text-decoration: none;
+  padding: 0.4rem;
+  background: #45454588;
+  color: white;
+}
+
+.nav--a:hover{
+  background: #454545FF
+}
+.nav--a__active {
+  pointer-events: none;
+  background-color: darkgrey;
+}
+
+body {
+  padding: 0 6rem;
+  background-image: url('./background-patern.jpg');
+  //background-image: url('https://thumbs.dreamstime.com/b/abstract-simple-geometric-vector-seamless-pattern-white-line-triangular-texture-grey-background-light-gray-abstract-simple-136072651.jpg');
+}
+.form--wrapper {
+  width: 50%;
+  margin: 0 auto;
+  width: 350px;
+  background: linear-gradient(90deg, rgba(249,231,157,1) 0%, rgba(249,231,157,1) 35%, rgba(108,223,246,1) 100%);
+  padding-bottom: 1rem;
+  border-radius: 5px 30px 5px 30px;
+}
+
+.page--wrapper {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.section {
+  background: linear-gradient(90deg, rgba(249,231,157,1) 0%, rgba(249,231,157,1) 35%, rgba(108,223,246,1) 100%);
+  border-radius: 5px 30px;
+  min-width: 300px;
+  padding: 0 1rem 1rem 1rem;
+  min-height: 16rem;
+}
+
+.titre-categorie {
+  color:white;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.section--list {
+  margin-left: 2rem;
+}
+
+.section--list-items {
+  color: white;
+  weight: 600;
+  margin: 0.8rem;
+  text-transform: capitalize;
+}
+
+.section--list-items__cat {
+  cursor: pointer;
+}
+
+.form--form {
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction:column;
+  height: 10rem;
+}
+
+.addprod {
+  height: 18rem;
+}
+
+.form--inputWrapper {
+  display: flex;
+  margin: 0.6rem;
+}
+
+.form--title, .section--title {
+  padding-top: 2rem;
+  text-align: center;
+  color: #fff;
+  font-size: 1.6rem;
+  opacity: 0.8;
+  padding-bottom: 1rem;
+}
+
+.form--input {
+  margin: 0 auto;
+  padding: 0.3rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #f0ead6;
+  color: darkgrey;
+  font-size: 0.9rem;
+  text-align: center;
+  width: 70%;
+}
+
+.form--input:focus {
+  outline: 1px solid white;
+}
+
+.form--submit {
+  background: #45454511;
+  border: solid 2px white;
+  border-radius: 10px;
+  width: 50%;
+  color: white;
+  font-size: 1rem;
+  align-self: center;
+  margin: 1.2rem;
+  font-weight: 500;
+  opacity: 0.8;
+  padding: 0.3rem;
+}
+
+.form--submit:hover {
+  background-color:#45454533;
+}
+
+.form--disconnect {
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 1rem;
+}
+
+.connect--success {
+  text-align: center;
+  font-size: 1.5rem;
+  background: #3bd18644;
+  color: #108f4f;
+  position: relative;
+  top: 30%;
+  padding: 1rem;
+}
+
+.connect--failure {
+    text-align: center;
+    font-size: 1.5rem;
+    background: #f2754444;
+    color: #e01010;
+    position: relative;
+    top: 30%;
+    padding: 1rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 85%;
+}
+
+.footer--wrapper {
+  background-color: grey;
+  opacity:0.7;
+  color: white;
+  height: 2.2rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
+.footer-easterEgg {
+  font-size: 0.7rem;
+  font-style: italic;
+  opacity: 0.2;
+  padding: 0.3rem;
+  cursor: default;
+  color:white;
+  text-decoration: none;
+}
+
+.footer-easterEgg:hover {
+  opacity: 0.8;
+  pointer-events: none;
+  font-size: 2rem;
+  font-weight: 800;
+}
